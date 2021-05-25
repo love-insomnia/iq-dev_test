@@ -1,0 +1,327 @@
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {
+    width: 70px;
+    padding: 0;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/*input[type=radio] {*/
+/*    margin: 0;*/
+/*}*/
+
+/*---------------------
+    Header */
+
+.header__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__info {
+    margin-top: 25px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+
+.header__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__tel {
+    text-decoration: none;
+    color: #eb5017;
+    font-size: 25px;
+}
+
+.header__tel:hover {
+    text-decoration: underline;
+}
+
+
+/*---------------------
+    Menu */
+
+.menu {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: #231F20;
+}
+
+.menu__list-item {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    text-align: center;
+    flex-grow: 1;
+    list-style: none;
+    padding: 20px;
+    transition: .1s background-color linear;
+    border-right: 1px solid #eb5017;
+}
+
+.menu__list-item--active {
+    background-color: #eb5017;
+}
+
+.menu__list-item:last-child {
+    border-right: none;
+}
+
+.menu__list-item:hover {
+    background-color: #eb5017;
+}
+
+.menu__link {
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+/*---------------------
+    Breadcrumbs */
+
+
+.breadcrumbs {
+    margin: 0 0 10px 0;
+    padding: 15px 30px;
+    display: flex;
+    list-style: none;
+}
+
+.breadcrumbs__link {
+    color: #696667;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #696667;
+}
+
+.breadcrumbs__item::after {
+    content: '-';
+    margin: 0 3px;
+    color: #696667;
+}
+
+.breadcrumbs__item:last-child::after {
+    content: '';
+}
+
+.breadcrumbs__link--active {
+    border-bottom: none;
+}
+
+.breadcrumbs__link--active:hover {
+    border-bottom: 1px solid #696667;
+}
+
+/*---------------------
+    Calc */
+
+
+.calc__inner {
+    padding: 20px 0 50px 30px;
+    max-width: 60%;
+    background-color: #F2F2F2;
+    margin: 0 0 0 30px;
+
+}
+
+.calc__title {
+    padding: 0 0 35px 70px;
+    font-size: 40px;
+    color: #eb5017;
+}
+
+.calc__form__list {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.calc__form__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.calc__form__list-item label {
+    flex: 0 0 24%;
+    padding-right: 25px;
+    text-align: right;
+}
+
+.calc__form__list-item p {
+    margin: 0 0 0 9px;
+}
+
+input.radio {
+    margin: 0 0 0 20px;
+}
+
+.calc__info {
+    display: flex;
+    align-items: center;
+}
+
+.calc__but {
+    color: #395306;
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: 1px #ffffbe solid;
+    background: linear-gradient(0deg, #81C900, #BCF235);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+.calc__result {
+    padding-left: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #395306;
+}
+
+/*---------------------
+    Footer */
+
+.footer {
+    margin-top: auto;
+}
+
+.footer__inner {
+    background-color: #231F20;
+}
+
+.footer__list {
+    margin: 0;
+    list-style: none;
+    padding: 20px 0 60px 90px;
+    display: flex;
+}
+
+.footer__list-item {
+    padding-left: 30px;
+}
+
+.footer__list-item:first-child {
+    padding-left: 0;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+/*---------------------
+    Datepicker */
+
+.ui-datepicker-calendar {
+    z-index: 3;
+}
+
+
+
+
+/*---------------------
+    Slider */
+
+#deposit_sum, #replenishment_sum {
+    width: 30%;
+    background-color: #1E1F22;
+    position: relative;
+    margin: 0 0 0 40px;
+    padding: 0 10px;
+    border: 2px solid white;
+    border-radius: 6px;
+    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.52);
+}
+
+.ui-slider .ui-slider-handle {
+    z-index: 1;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -3px;
+    outline: none;
+    border-radius: 50px;
+}
+
+.ui-slider .ui-slider-range {
+    z-index: 0;
+}
+.ui-widget-header {
+    background: linear-gradient(0deg, #7BA129, #8DB439);
+    height: 8px;
+    left: 1px;
+    top: 1px;
+    position: absolute;
+
+}
+
+#res_deposit_sum, #res_replenishment_sum {
+    z-index: 1;
+    text-align: center;
+    width: 8rem;
+    position: absolute;
+    top: 10px;
+    left: -50px;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 0;
+
+}
+
+
+
+
+
+
